@@ -20,6 +20,12 @@ body {
 }
 .btns div {
   background: #222222;
+  border-radius: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
 }
 .value {
   font-size: 130px;
