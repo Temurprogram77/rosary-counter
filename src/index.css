@@ -52,7 +52,14 @@ body {
   cursor: pointer;
   border: 7px solid black;
   background: rgb(1, 48, 28);
+  transition: all 1s;
   width: 80px;
+}
+.back:active {
+  border: 5px solid #00EA86;
+  background: #007543;
+  color: #00EA86;
+  transition: all 0.2s;
 }
 .main {
   display: flex;
