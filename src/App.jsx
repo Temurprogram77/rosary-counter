@@ -3,8 +3,6 @@ import { useState } from "react";
 
 const App = () => {
   const [count, setCount] = useState(0);
-  const [logic, setLogic] = useState(0);
-  console.log(setCount);
 
   function clickedBtn() {
     setCount(count + 1);
@@ -24,9 +22,9 @@ const App = () => {
           <div className="button2">Edit</div>
           <div className="button3">Reset</div>
         </div>
-        <div className="value">0</div>
+        <div className="value">{count}</div>
         <div className="main">
-          <div onClick={()=>clickedBtn} className="next main-btn">
+          <div onClick={clickedBtn} className="next main-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
