@@ -5,7 +5,12 @@ const App = () => {
   const [count, setCount] = useState(0);
   const [zikr, setZikr] = useState("Alhamdulillah");
 
-  let arr = ["Alhamdulillah", "Allahu Akbar", "Subhanallah", "Siz 99 Zikrni aytib bo'ldingiz!"];
+  let arr = [
+    "Alhamdulillah",
+    "Allahu Akbar",
+    "Subhanallah",
+    "Siz 99 Zikrni aytib bo'ldingiz!",
+  ];
 
   function clickedBtn() {
     const newCount = count + 1;
@@ -18,7 +23,7 @@ const App = () => {
     } else if (newCount === 99) {
       setZikr(arr[3]);
     } else if (newCount === 100) {
-      setZikr(arr[0])
+      setZikr(arr[0]);
     }
   }
 
@@ -29,9 +34,19 @@ const App = () => {
 
   function clickBtn() {
     if (count !== 0) {
-      setCount(count - 1);
+      const newCount = count - 1;
+      setCount(newCount);
+
+      if (newCount === 33) {
+        setZikr(arr[0]);
+      } else if (newCount === 66) {
+        setZikr(arr[1]);
+      } else if (newCount === 99) {
+        setZikr(arr[2]);
+      }
     }
   }
+
   return (
     <div className="body">
       <div className="container">
