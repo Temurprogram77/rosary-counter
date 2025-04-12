@@ -17,6 +17,8 @@ const App = () => {
       setZikr(arr[2]);
     } else if (newCount === 99) {
       setZikr(arr[3]);
+    } else if (newCount === 100) {
+      setZikr(arr[0])
     }
   }
 
