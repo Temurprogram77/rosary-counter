@@ -2,10 +2,14 @@ import React from "react";
 import { useState } from "react";
 
 const App = () => {
-  const [index, setIndex] = useState(0);
+  const [count, setCount] = useState(0);
   const [logic, setLogic] = useState(0);
   console.log(index);
-  console.log(setIndex);
+  console.log(setCount);
+
+  function clickedBtn() {
+    setCount(count + 1);
+  }
 
   return (
     <div className="body">
