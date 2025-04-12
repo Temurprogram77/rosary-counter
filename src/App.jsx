@@ -3,14 +3,26 @@ import { useState } from "react";
 
 const App = () => {
   const [count, setCount] = useState(0);
+  const [zikr, setZikr] = useState("Alhamdulillah");
 
-  let arr = ["Alhamdulillah", "Allahu Akbar", "Subhanallah"];
+  let arr = ["Alhamdulillah", "Allahu Akbar", "Subhanallah", "Siz 99 Zikrni aytib bo'ldingiz!"];
+
   function clickedBtn() {
-    setCount(count + 1);
+    const newCount = count + 1;
+    setCount(newCount);
+
+    if (newCount === 33) {
+      setZikr(arr[1]);
+    } else if (newCount === 66) {
+      setZikr(arr[2]);
+    } else if (newCount === 99) {
+      setZikr(arr[3]);
+    }
   }
 
   function resetBtn() {
-    setCount(count == 0);
+    setCount(0);
+    setZikr("");
   }
 
   function clickBtn() {
@@ -18,15 +30,17 @@ const App = () => {
       setCount(count - 1);
     }
   }
-
   return (
     <div className="body">
       <div className="container">
         <div className="btns">
           <div className="button1">+1</div>
           <div className="button2">Edit</div>
-          <div onClick={resetBtn} className="button3">Reset</div>
+          <div onClick={resetBtn} className="button3">
+            Reset
+          </div>
         </div>
+        <div className="text">{zikr}</div>
         <div className="value">{count}</div>
         <div className="main">
           <div onClick={clickedBtn} className="next main-btn">
@@ -48,7 +62,6 @@ const App = () => {
             </svg>
           </div>
         </div>
-        <div className="text"></div>
       </div>
     </div>
   );
