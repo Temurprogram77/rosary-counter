@@ -4,8 +4,13 @@ import { useState } from "react";
 const App = () => {
   const [count, setCount] = useState(0);
 
+  let arr = ["Alhamdulillah", "Allahu Akbar", "Subhanallah"];
   function clickedBtn() {
     setCount(count + 1);
+  }
+
+  function resetBtn() {
+    setCount(count == 0);
   }
 
   function clickBtn() {
@@ -20,7 +25,7 @@ const App = () => {
         <div className="btns">
           <div className="button1">+1</div>
           <div className="button2">Edit</div>
-          <div className="button3">Reset</div>
+          <div onClick={resetBtn} className="button3">Reset</div>
         </div>
         <div className="value">{count}</div>
         <div className="main">
@@ -43,6 +48,7 @@ const App = () => {
             </svg>
           </div>
         </div>
+        <div className="text"></div>
       </div>
     </div>
   );
