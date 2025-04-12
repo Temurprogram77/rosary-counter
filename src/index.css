@@ -16,12 +16,12 @@ body {
 .btns {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 .btns div {
   background: #222222;
   border-radius: 30px;
-  padding: 10px 30px;
+  padding: 7px 25px;
   cursor: pointer;
   color: #fff;
   font-weight: 600;
@@ -35,14 +35,23 @@ body {
   top: 0;
   position: absolute;
   cursor: pointer;
-  border: 4px solid black;
+  border: 5px solid black;
   width: 250px;
+  background: rgb(1, 48, 28);
+  transition: all 1s;
+}
+.next:active {
+  border: 5px solid #00EA86;
+  background: #007543;
+  color: #00EA86;
+  transition: all 0.2s;
 }
 .back {
   bottom: 0;
   position: absolute;
   cursor: pointer;
-  border: 4px solid black;
+  border: 7px solid black;
+  background: rgb(1, 48, 28);
   width: 80px;
 }
 .main {
@@ -57,6 +66,5 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(1, 48, 28);
   border-radius: 50%;
 }
