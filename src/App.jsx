@@ -29,7 +29,7 @@ const App = () => {
 
   function resetBtn() {
     setCount(0);
-    setZikr("");
+    setZikr(arr[0]);
   }
 
   function clickBtn() {
