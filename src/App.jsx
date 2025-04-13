@@ -4,12 +4,14 @@ import { useState } from "react";
 const App = () => {
   const [count, setCount] = useState(0);
   const [zikr, setZikr] = useState("Alhamdulillah");
-  const [selectedOption, setSelectedOption] = useState("");
+
+  const [selectedOption, setSelectedOption] = useState("1");
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
     console.log("Tanlangan qiymat:", event.target.value);
   };
+
   let arr = [
     "Alhamdulillah",
     "Allahu Akbar",
@@ -18,7 +20,8 @@ const App = () => {
   ];
 
   function clickedBtn() {
-    const newCount = count + 1;
+    const increment = Number(selectedOption);
+    const newCount = count + increment;
     setCount(newCount);
 
     if (newCount < 33) {
