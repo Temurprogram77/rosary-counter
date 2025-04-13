@@ -13,17 +13,17 @@ const App = () => {
   ];
 
   function clickedBtn() {
-    const newCount = count + 1;
+    const newCount = count + 3;
     setCount(newCount);
 
-    if (newCount === 33) {
-      setZikr(arr[1]);
-    } else if (newCount === 66) {
-      setZikr(arr[2]);
-    } else if (newCount === 99) {
-      setZikr(arr[3]);
-    } else if (newCount === 100) {
+    if (newCount < 33) {
       setZikr(arr[0]);
+    } else if (newCount < 66) {
+      setZikr(arr[1]);
+    } else if (newCount < 99) {
+      setZikr(arr[2]);
+    } else if (newCount >= 99) {
+      setZikr(arr[3]);
     }
   }
 
