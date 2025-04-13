@@ -51,7 +51,15 @@ const App = () => {
     <div className="body">
       <div className="container">
         <div className="btns">
-          <div className="button1">+1</div>
+          <select className="button1">
+            <option value="1">+1</option>
+            <option value="2">+2</option>
+            <option value="3">+3</option>
+            <option value="4">+4</option>
+            <option value="5">+5</option>
+            <option value="6">+6</option>
+          </select>
+
           <div className="button2">Edit</div>
           <div onClick={resetBtn} className="button3">
             Reset
